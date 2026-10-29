@@ -3,6 +3,7 @@
 A configurable, browser-based 3D virtual office built with [Three.js](https://threejs.org/). Walk around a low-poly office, interact with coworkers, explore furniture and TVs, trigger dance breaks, and play guitar — all from your browser with zero build step.
 
 ![Virtual Office Screenshot](docs/img-1.png)
+![Virtual Office Screenshot2](docs/img-2.png)
 
 ## Features
 
