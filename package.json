@@ -17,11 +17,15 @@
     "interactive",
     "game"
   ],
-  "author": "",
+  "author": "Andi Rustianto <anditorx@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/anditorx/virtual-office-xyz.git"
+  },
+  "homepage": "https://github.com/anditorx/virtual-office-xyz#readme",
+  "bugs": {
+    "url": "https://github.com/anditorx/virtual-office-xyz/issues"
   },
   "engines": {
     "node": ">=16"

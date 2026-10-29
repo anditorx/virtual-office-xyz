@@ -24,7 +24,7 @@ A configurable, browser-based 3D virtual office built with [Three.js](https://th
 ### Option 1: npx (recommended)
 
 ```bash
-git clone https://github.com/user/virtual-office-xyz.git
+git clone https://github.com/anditorx/virtual-office-xyz.git
 cd virtual-office-xyz
 npx serve .
 ```
