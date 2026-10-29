@@ -19,19 +19,71 @@ A configurable, browser-based 3D virtual office built with [Three.js](https://th
 - **Config-Driven** — Edit one file (`office.config.js`) to customize everything
 - **Zero Build Step** — ES modules loaded directly; just serve the folder
 
-## Quick Start
+## Live Demo
 
-### Option 1: npx (recommended)
+Try it now: **[anditorx.github.io/virtual-office-xyz](https://anditorx.github.io/virtual-office-xyz/)**
+
+## Create Your Own Virtual Office
+
+Want to build a virtual office for **your** team or project? It only takes 3 steps:
+
+### Step 1: Clone & Run
 
 ```bash
-git clone https://github.com/anditorx/virtual-office-xyz.git
-cd virtual-office-xyz
+git clone https://github.com/anditorx/virtual-office-xyz.git my-office
+cd my-office
 npx serve .
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) — you'll see the default office running.
 
-### Option 2: Any static file server
+### Step 2: Customize Your Office
+
+Open `office.config.js` in any text editor. This is the **only file you need to change**:
+
+```js
+export default {
+  // Your office name
+  title: 'Acme Engineering',
+  subtitle: 'Product Team',
+
+  // Add your team members
+  people: [
+    { seat: 'T1.L0', name: 'Sarah',  role: 'Team Lead',    shirt: '#c4573f', status: 'Sprint planning' },
+    { seat: 'T1.R0', name: 'James',  role: 'Frontend Dev', shirt: '#3f7cc4', status: 'Working on dashboard' },
+    { seat: 'T1.L1', name: 'Priya',  role: 'Backend Dev',  shirt: '#2a7a5a', status: 'API refactor' },
+    { seat: 'T2.R0', name: 'Alex',   role: 'Designer',     shirt: '#e0b02a', status: 'New mockups' },
+    // Add as many people as you want...
+  ],
+
+  // Your player character
+  player: { name: 'You', shirt: '#2a7a5a', seat: 'T3.R0' },
+
+  // Customize TVs with your team's info
+  tvs: [
+    { id: 'tv1', x: -8, label: 'Sprint Board', content: 'Sprint 24 — 8/12 tasks done' },
+    { id: 'tv2', x: -3, label: 'CI/CD', content: 'All pipelines green ✓' },
+  ],
+}
+```
+
+Save the file and refresh the browser — your office updates instantly!
+
+### Step 3: Deploy (Optional)
+
+**GitHub Pages (free):**
+```bash
+# Push to your own GitHub repo
+git remote set-url origin https://github.com/YOUR_USERNAME/my-office.git
+git push -u origin main
+```
+Then go to **Settings → Pages → Source: main branch** — your office is live!
+
+**Other hosting:** Just upload the entire folder to any static hosting (Netlify, Vercel, Cloudflare Pages, or even a shared hosting with FTP). No build step needed.
+
+---
+
+### Alternative Install Methods
 
 ```bash
 # Python
@@ -40,18 +92,27 @@ python3 -m http.server 8000
 # PHP
 php -S localhost:8000
 
-# Node (with serve installed globally)
-npm install -g serve && serve .
-```
-
-### Option 3: npm scripts
-
-```bash
-npm install
-npm run dev
+# npm scripts
+npm install && npm run dev
 ```
 
 > **Note:** Three.js is loaded from CDN — no `node_modules` needed for the app itself. The `npm install` only sets up the local dev server.
+
+### Use as npm Package in Your Project
+
+You can also add this to an existing project:
+
+```bash
+# Copy the files into your project
+cp -r virtual-office-xyz/src/ your-project/virtual-office/src/
+cp virtual-office-xyz/index.html your-project/virtual-office/
+cp virtual-office-xyz/office.config.js your-project/virtual-office/
+```
+
+Or embed as an iframe:
+```html
+<iframe src="virtual-office/index.html" width="100%" height="600" frameborder="0"></iframe>
+```
 
 ## Controls
 
@@ -119,6 +180,18 @@ people: [
 - `T1.L0` = Table 1, Left side, position 0
 - `T1.R2` = Table 1, Right side, position 2
 - `H1` = Head desk 1
+
+**Visual guide:**
+```
+        Left side (L)     Right side (R)
+       ┌──────────────────────────────┐
+  L0 → │  👤  👤  👤  👤  👤  👤    │ ← R0
+  L1 → │  👤  👤  👤  👤  👤  👤    │ ← R1
+       └──────────────────────────────┘
+              Table (e.g. T1)
+
+  Head desks: H1, H2, H3... (single desk, one person each)
+```
 
 ### TVs and Whiteboards
 
