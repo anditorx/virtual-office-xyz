@@ -1,0 +1,29 @@
+{
+  "name": "virtual-office",
+  "version": "1.0.0",
+  "description": "Interactive 3D virtual office tour — low-poly, GTA-style HUD, zero build step",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve . -p 3333 --cors",
+    "start": "npx serve . -p 3333 --cors"
+  },
+  "keywords": [
+    "virtual-office",
+    "3d",
+    "three.js",
+    "office-tour",
+    "low-poly",
+    "webgl",
+    "interactive",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
