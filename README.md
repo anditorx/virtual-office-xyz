@@ -69,6 +69,23 @@ export default {
 
 Save the file and refresh the browser — your office updates instantly!
 
+### Step 2b: Let AI Do It For You
+
+Don't want to edit config manually? Just give this repo link to any AI assistant (Claude, ChatGPT, Copilot, etc.) with a prompt like:
+
+> **"Clone this repo: https://github.com/anditorx/virtual-office-xyz — then customize `office.config.js` for my team. Here are my team members: [list your team]. Our company name is [name]. We have 3 desk rows with 5 people each."**
+
+Or even simpler:
+
+> **"I want to create a 3D virtual office for my startup. Use this project: https://github.com/anditorx/virtual-office-xyz — set it up with 8 team members, company name 'Rocket Labs', and show our sprint board on the TVs."**
+
+The AI will:
+1. Clone the repo
+2. Edit `office.config.js` with your team data
+3. Set up and run it for you
+
+This works because the entire office is driven by **one config file** — no coding knowledge needed!
+
 ### Step 3: Deploy (Optional)
 
 **GitHub Pages (free):**
