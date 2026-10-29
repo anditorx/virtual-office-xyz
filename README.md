@@ -224,5 +224,3 @@ WebGL 2.0 required. Works on most modern devices including laptops with integrat
 ## Credits
 
 Built with [Three.js](https://threejs.org/) · Audio powered by [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
-# virtual-office-xyz
-# virtual-office-xyz
